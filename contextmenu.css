@@ -1,0 +1,44 @@
+#contextmenu {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    min-width: 100px;
+    z-index: 100;
+}
+
+#contextmenu :not(:first-child) {
+    margin-top: -1px;
+}
+
+.contextmenu-item {
+    font: bold 14px Verdana;
+    cursor: pointer;
+    border: 1px solid gray;
+    color: black;
+    padding: 10px;
+    opacity: inherit;
+}
+
+.background-animated {
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+.opacity-animated {
+    transition-property: opacity;
+    transition-duration: 0.5s;
+}
+
+.position-animated {
+    transition-property: left, top;
+    transition-duration: 0.5s;
+}
+
+.size-animated {
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.contextmenu-item:hover {
+    background-color: #CBC9A2;
+}
