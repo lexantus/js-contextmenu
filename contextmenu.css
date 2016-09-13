@@ -24,16 +24,6 @@
     transition-duration: 0.3s;
 }
 
-.opacity-animated {
-    transition-property: opacity;
-    transition-duration: 0.5s;
-}
-
-.position-animated {
-    transition-property: left, top;
-    transition-duration: 0.5s;
-}
-
 .size-animated {
     transition-property: transform;
     transition-duration: 0.5s;

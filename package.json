@@ -1,0 +1,23 @@
+{
+  "name": "contextmenu",
+  "version": "1.0.0",
+  "description": "context menu for v6",
+  "main": "contextmenu.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gsap": "^1.19.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexantus/js-contextmenu.git"
+  },
+  "author": "Rozhin Alexey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lexantus/js-contextmenu/issues"
+  },
+  "homepage": "https://github.com/lexantus/js-contextmenu#readme"
+}

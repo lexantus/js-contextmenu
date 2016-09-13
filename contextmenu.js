@@ -7,7 +7,6 @@ var contextMenu = {
         {
             this.initStyle();
             this.wrapper = document.createElement("div");
-            this.wrapper.className = "opacity-animated position-animated size-animated";
             this.wrapper.id = "contextmenu";
             this.wrapper.style.display = "none";
             document.body.appendChild(this.wrapper);
@@ -28,15 +27,19 @@ var contextMenu = {
         }
     },
     showAt: function (x, y) {
+        TweenLite.to(this.wrapper, 0.25, {opacity: 1});
+        TweenLite.to(this.wrapper, 0.5,  {scaleX: 1, scaleY: 1, ease: Bounce.easeOut});
         this.wrapper.style.display = "block";
+        this.wrapper.style.opacity = 0;
         this.moveTo(x, y);
     },
     moveTo: function (x, y) {
-        this.wrapper.style.left = x;
-        this.wrapper.style.top = y;
+        TweenLite.to(this.wrapper, 0.25, {x: x, y: y});
     },
     hide: function () {
-        this.wrapper.style.display = "none";
+        TweenLite.to(this.wrapper, 0.25, {opacity: 0, scaleX: 0.1, scaleY: 0.1, onComplete: function () {
+            this.wrapper.style.display = "none";
+        }});
     },
     initStyle: function () {
         var link = document.createElement("link");
