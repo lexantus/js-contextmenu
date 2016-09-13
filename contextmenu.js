@@ -5,6 +5,7 @@ var contextMenu = {
     {
         if (!this.wrapper)
         {
+            this.initStyle();
             this.wrapper = document.createElement("div");
             this.wrapper.className = "opacity-animated position-animated size-animated";
             this.wrapper.id = "contextmenu";
@@ -36,6 +37,12 @@ var contextMenu = {
     },
     hide: function () {
         this.wrapper.style.display = "none";
+    },
+    initStyle: function () {
+        var link = document.createElement("link");
+        link.rel="stylesheet";
+        link.href="contextmenu.css";
+        document.head.appendChild(link);
     }
 };
 
