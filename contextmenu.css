@@ -1,7 +1,5 @@
 #contextmenu {
     position: absolute;
-    top: 100px;
-    left: 100px;
     min-width: 100px;
     z-index: 100;
 }
@@ -20,17 +18,35 @@
 }
 
 .background-animated {
-    transition-property: background-color;
+    -webkit-transition-property: background-color;
+    -moz-transition: background-color;
+    -o-transition: background-color;
+    transition: background-color;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
 
 .opacity-animated {
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
     transition-property: opacity;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
 
 .position-animated {
+    -webkit-transition-property: left, top;
+    -moz-transition-property: left, top;
+    -o-transition-property: left, top;
     transition-property: left, top;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
 
